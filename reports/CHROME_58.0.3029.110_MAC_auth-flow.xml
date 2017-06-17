@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="auth-flow"
+    errors="0" failures="1" hostname="" id="" package="auth-flow" skipped="0"
+    tests="1" time="4.586" timestamp="Sat, 17 Jun 2017 10:29:26 GMT">
+  
+    <testcase name="get to signup page" classname="auth-flow" time="4.586" assertions="1">  <failure message="Timed out while waiting for element &lt;.navbar&gt; to be present for 1000 milliseconds.">    at Object.get to signup page (/Users/elvira/Desktop/skincare/client/tests/auth-flow.js:7:8)
+    at _combinedTickCallback (internal/process/next_tick.js:95:7)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
