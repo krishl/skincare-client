@@ -7,7 +7,8 @@ const sheet = StyleSheet.create({
     backgroundColor: 'white',
     opacity: '.8',
     margin: 'auto',
-    padding: '20px'
+    padding: '20px',
+    '&:hover': { opacity: '.95' }
   },
   content: {
     opacity: '1'
