@@ -3,7 +3,7 @@ import * as types from './actionTypes';
 
 export function loadProducts() {  
   return function(dispatch) {
-    return productApi.getAllPRoducts().then(products => {
+    return productApi.getAllProducts().then(products => {
       dispatch(loadProductsSuccess(products));
     }).catch(error => {
       throw(error);
