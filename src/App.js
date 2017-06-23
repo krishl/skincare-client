@@ -7,15 +7,15 @@ import {
 } from 'react-router-dom'
 import Compare from './components/Compare.js'
 
-const UserProducts = () => (
+const Products = () => (
   <div>
-    <h2>My Products</h2>
+    <h2>Products</h2>
   </div>
 )
 
-const UserIngredients = () => (
+const Ingredients = () => (
   <div>
-    <h2>My Ingredients</h2>
+    <h2>Ingredients</h2>
   </div>
 )
 
@@ -27,14 +27,14 @@ class App extends Component {
         <Router>
           <div class="navbar">
             <div id="links">
-              <Link to="/">Compare</Link> 
-              <Link to="/users/:userId/products">My Products</Link>
-              <Link to="/users/:userId/ingredients">My Ingredients</Link>
+              <Link to="/">Home</Link> 
+              <Link to="/products">Products</Link>
+              <Link to="/ingredients">Ingredients</Link>
             </div>
             <hr/>
               <Route exact path="/" component={Compare}/>
-              <Route path="/users/:userId/products" component={UserProducts}/>
-              <Route path="/users/:userId/ingredients" component={UserIngredients}/>
+              <Route path="/products" component={Products}/>
+              <Route path="/ingredients" component={Ingredients}/>
           </div>
         </Router>
       </div>

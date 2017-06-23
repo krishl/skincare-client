@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, css} from 'aphrodite-jss'
+import {StyleSheet, css} from 'aphrodite-jss';
 
 const sheet = StyleSheet.create({
   primary: {
@@ -13,7 +13,7 @@ const sheet = StyleSheet.create({
   content: {
     opacity: '1'
   }
-  })
+})
 
 export default class Compare extends Component {
   render() {
@@ -22,7 +22,6 @@ export default class Compare extends Component {
         <div id={css(sheet.content)}>
           <h2>Welcome to Luminance!</h2> Everybody is different in their own way, and this statement does not exclude our skin's reactions to skincare ingredients.<br />
           This tool compares the ingredients between skincare products for similarities.
-          <p>Anybody may use the tool below; for extra features please create an account or login.</p>
         </div>
       </div>
     )}
