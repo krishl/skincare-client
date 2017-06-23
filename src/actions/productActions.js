@@ -1,4 +1,5 @@
 import productApi from '../api/productApi';
+import * as types from './actionTypes'; 
 
 export function loadProducts() {  
   return function(dispatch) {
@@ -8,4 +9,8 @@ export function loadProducts() {
       throw(error);
     });
   };
+}
+
+export function loadProductsSuccess(products) {  
+  return {type: types.LOAD_PRODUCTS_SUCCESS, products};
 }
