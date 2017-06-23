@@ -3,7 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  NavLink
 } from 'react-router-dom'
 import configureStore from './store/configureStore';  
 import { Provider } from 'react-redux'; 
@@ -33,11 +33,11 @@ class App extends Component {
         <h1 className="text">Luminance</h1>
         <Provider store={store}>
           <Router>
-            <div class="navbar">
-              <div id="links">
-                <Link to="/">Home</Link> 
-                <Link to="/products">Products</Link>
-                <Link to="/ingredients">Ingredients</Link>
+            <div className="navbar">
+              <div className="links">
+                <NavLink exact to="/" activeClassName="active">Home</NavLink> 
+                <NavLink to="/products" activeClassName="active">Products</NavLink>
+                <NavLink to="/ingredients" activeClassName="active">Ingredients</NavLink>
               </div>
               <hr/>
                 <Route exact path="/" component={Compare}/>

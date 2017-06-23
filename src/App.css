@@ -19,18 +19,18 @@ ul {
   margin: 0px;
 }
 
-div#links {
+div.links {
   background: black;
   opacity: .8;
   border-radius: 25px;
 }  
 
-div#links:hover {
+div.links:hover {
   background: black;
   opacity: .95;
 }  
 
-div#links a:link, div#links a:visited {
+div.links a:link, div.links a:visited {
     background-color: black;
     color: white;
     padding: 14px 25px;
@@ -40,6 +40,7 @@ div#links a:link, div#links a:visited {
     margin: 0px 10px;
 }
 
-div#links a:hover, div#links a:active {
+div.links a:hover, div.links a.active {
     background-color: darkslateblue;
+    border-radius: 10px;
 }
