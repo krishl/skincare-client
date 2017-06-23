@@ -7,9 +7,12 @@ import {
 } from 'react-router-dom'
 import configureStore from './store/configureStore';  
 import { Provider } from 'react-redux'; 
+import { loadProducts } from './actions/productActions'
 import Compare from './components/Compare.js'
 
+
 const store = configureStore();
+store.dispatch(loadProducts());
 
 const Products = () => (
   <div>
