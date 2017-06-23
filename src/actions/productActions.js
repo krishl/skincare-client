@@ -1,4 +1,4 @@
-import productApi from '../api/productApi';
+import productApi from '../api/productApi.js';
 import * as types from './actionTypes'; 
 
 export function loadProducts() {  
