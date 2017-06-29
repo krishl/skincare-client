@@ -19,7 +19,7 @@ export default class Compare extends Component {
   render() {
     return (
       <div className={css(sheet.primary)}>
-        <div id={css(sheet.content)}>
+        <div className={css(sheet.content)}>
           <h2>Welcome to Luminance!</h2> Everybody is different in their own way, and this statement does not exclude our skin's reactions to skincare ingredients.<br />
           This tool compares the ingredients between skincare products for similarities.
         </div>
