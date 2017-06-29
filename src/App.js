@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Route,
-  NavLink
+  Route
 } from 'react-router-dom'
 import configureStore from './store/configureStore';  
 import { Provider } from 'react-redux'; 
 import { loadProducts } from './actions/productActions'
-import Compare from './components/Compare.js'
-import ProductsPage from './components/containers/ProductsPage.js'
+import NavBar from './components/NavBar.js';
+import Compare from './components/Compare.js';
+import ProductsPage from './components/containers/ProductsPage.js';
+import ProductShow from './components/containers/ProductShow.js';
 
 const store = configureStore();
 store.dispatch(loadProducts());
@@ -28,14 +29,11 @@ class App extends Component {
         <Provider store={store}>
           <Router>
             <div className="navbar">
-              <div className="links">
-                <NavLink exact to="/" activeClassName="active">Home</NavLink> 
-                <NavLink to="/products" activeClassName="active">Products</NavLink>
-                <NavLink to="/ingredients" activeClassName="active">Ingredients</NavLink>
-              </div>
+              <NavBar />
               <hr/>
                 <Route exact path="/" component={Compare}/>
                 <Route path="/products" component={ProductsPage}/>
+                  <Route path="/products/:id" component={ProductShow}/>
                 <Route path="/ingredients" component={Ingredients}/>
             </div>
           </Router>
