@@ -9,16 +9,10 @@ import configureStore from './store/configureStore';
 import { Provider } from 'react-redux'; 
 import { loadProducts } from './actions/productActions'
 import Compare from './components/Compare.js'
-
+import ProductsPage from './components/containers/ProductsPage.js'
 
 const store = configureStore();
 store.dispatch(loadProducts());
-
-const Products = () => (
-  <div>
-    <h2>Products</h2>
-  </div>
-)
 
 const Ingredients = () => (
   <div>
@@ -41,7 +35,7 @@ class App extends Component {
               </div>
               <hr/>
                 <Route exact path="/" component={Compare}/>
-                <Route path="/products" component={Products}/>
+                <Route path="/products" component={ProductsPage}/>
                 <Route path="/ingredients" component={Ingredients}/>
             </div>
           </Router>
