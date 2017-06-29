@@ -23,13 +23,13 @@ const sheet = StyleSheet.create({
 
 const ProductsPage = ({ match, products }) =>
   <div className={css(sheet.primary)}>
-    <div className={css(sheet.primary)}>
-      <ProductsList products={products} />
-      <Route path={`${match.url}/:productId`} component={ProductShow}/>
-      <Route exact path={match.url} render={() => (
-        <h3>Products Index</h3>
+    <Route path={`${match.url}/:productId`} component={ProductShow}/>
+    <Route exact path={match.url} render={() => (
+      <div className={css(sheet.content)}>
+        <h2>Products Index</h2>
+        <ProductsList products={products} />
+      </div>
     )}/>
-    </div>
   </div>
 
 ProductsPage.propTypes = {
